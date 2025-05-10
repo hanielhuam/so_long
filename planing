@@ -1,0 +1,41 @@
+
+planejamento da so_long
+
+1. [ ] trazer a libft com a GNL para este projeto
+2. [ ] fazer a GNL funcionar reutilizando as funções da libft
+3. [ ] fazer o Makefile
+4. [ ] ler o arquivo .ber
+5. [ ] criar uma matriz com os caracteres do arquivo
+7. [ ] listar todos os testes possíveis e o resultado esperado
+8. [ ] validar se só existe os caracteres permitidos (0,1,C,D,E,P)
+9. [ ] validar se o mapa é um retangulo
+9.1. [ ] checar se todas as linhas tem o mesmo tamanho
+10. [ ] validar se o mapa está rodeado por paredes (1)
+10.1. [ ] todos os elementos do índice 0 tem que estar com 1
+		e todo os elementos do índice lengfht tem que ser 1
+11. [ ] varificar a quatidade de elementos
+		'0' > 0; '1' > 11; 'P' == 1; 'C' > 0; 'E' == 1;
+12. [ ] Verificar se existe pelo menos 1 caminho possível
+		O caminho é não passar pela parede (1)
+		passar por todos os Coletáveis (C)
+		passar pela saída (E)
+		Não pode passar pelo diabo (D)
+12.1 [ ] algorítimo do fload_fill
+==============================================================================
+começar a parte gráfica
+13. [ ] abrir uma janela
+14. [ ] procurar uma imagem (textura)
+15. [ ] colocar textura na tela
+16. [ ] mostrar o mapa na tela com as texturas
+16.1 [ ] tentar fazer a animação
+17. [ ] atrelar as teclas do teclado com uma ação
+17.1 [ ] 'W' 'A' 'S' 'D' serão as teclas de movimentação do player
+		ao apertar 'ESC' a janela se fecha
+17.1.1 [ ] lembrar dar free em tudo que foi alocado
+18. [ ] Mostrar a quantidade de movimentos no terminal
+19. [ ] Não deixar o player entrar na parede
+20. [ ] Se o player tocar no Diabo o jogo acaba
+21. [ ] Se o jogador passar pela saída sem os coletáveis não vai acontecer nada
+22. [ ] Se o player passar pela saída com os coletávais o jogo acaba com vitória
+23. [ ] mostrar o número de movimentações na tela ao invés do terminal.
+
