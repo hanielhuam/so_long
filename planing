@@ -1,10 +1,15 @@
 
 planejamento da so_long
 
-1. [ ] trazer a libft com a GNL para este projeto
-2. [ ] fazer a GNL funcionar reutilizando as funções da libft
-3. [ ] fazer o Makefile
-4. [ ] ler o arquivo .ber
+1. [X] trazer a libft com a GNL para este projeto
+2. [X] fazer a GNL funcionar reutilizando as funções da libft
+3. [X] fazer o Makefile
+4. [X] ler o arquivo .ber
+4.1 [ ] verificar se é um arquivo que termine com o ".ber" no final
+4.1.2 [ ] fazer um search no argumento e verificar se está posição final -4
+4.2 [ ] Não pode receber mais parãmetros
+4.3 [ ] tratar o no caso em que for uma string vazia
+4.4 [ ] saber o que vai mostrar como mensagem após um desses erros forem pegos
 5. [ ] criar uma matriz com os caracteres do arquivo
 7. [ ] listar todos os testes possíveis e o resultado esperado
 8. [ ] validar se só existe os caracteres permitidos (0,1,C,D,E,P)
