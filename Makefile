@@ -7,7 +7,8 @@ LIBFT = ${LIBFT_DIR}/bin/libft.a
 LDFLAGS = -L${LIBFT_DIR}/bin -lft
 INCLUDE = -Iinclude -I${LIBFT_DIR}/include
 
-SRCS = ${SRC_DIR}/so_long.c
+SRCS = ${SRC_DIR}/so_long.c ${SRC_DIR}/treat_args.c \
+	   ${SRC_DIR}/validate_file.c ${SRC_DIR}/read_file.c
 OBJS = ${SRCS:${SRC_DIR}/%.c=${OBJ_DIR}/%.o}
 
 NAME = so_long

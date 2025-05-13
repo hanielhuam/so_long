@@ -17,6 +17,15 @@
 # include "ft_printf.h"
 # include <fcntl.h>
 
-# typedef s_game 
+typedef	struct	s_game
+{
+	char	**board;
+	int		collectables;
+	int		moviments;
+}				t_game;
+
+char	**treat_args(char	*file);
+int		validate_file(char *file);
+char	**read_file(int fd);
 
 #endif

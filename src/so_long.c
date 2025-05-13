@@ -14,16 +14,14 @@
 
 int	main(int argc, char **argv)
 {
-	char	**board_game;
+	//t_game	*game;
+	char	**game;
 
 	if (argc != 2)
 		return (0);
-
-	fd = open(argv[1], O_RDONLY);
-	
-	str = get_next_line(fd);
-	ft_printf("%s\n", str);
-	free(str);
-	close(fd);
+	game = treat_args(argv[1]);
+	//game = make_game(validate_board(treat_args(argv[1])));
+	if (!game)
+		return (9);
 	return (0);
 }
