@@ -20,7 +20,7 @@ planejamento da so_long
 10.1. [ ] todos os elementos do índice 0 tem que estar com 1
 		e todo os elementos do índice lengfht tem que ser 1
 11. [ ] varificar a quatidade de elementos
-		'0' > 0; '1' > 11; 'P' == 1; 'C' > 0; 'E' == 1;
+		'0' > 0; '1' > 0; 'P' == 1; 'C' > 0; 'E' == 1; 'D' > 0
 12. [ ] Verificar se existe pelo menos 1 caminho possível
 		O caminho é não passar pela parede (1)
 		passar por todos os Coletáveis (C)

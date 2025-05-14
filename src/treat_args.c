@@ -28,5 +28,6 @@ char **treat_args(char	*file)
 	board = read_file(fd);
 	if (!board)
 		return (NULL);
+
 	return (board);
 }

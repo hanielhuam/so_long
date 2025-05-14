@@ -27,5 +27,6 @@ typedef	struct	s_game
 char	**treat_args(char	*file);
 int		validate_file(char *file);
 char	**read_file(int fd);
+char	**validate_board(char **board);
 
 #endif
