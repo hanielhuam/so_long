@@ -22,6 +22,7 @@ int	main(int argc, char **argv)
 	game = treat_args(argv[1]);
 	//game = make_game(validate_board(treat_args(argv[1])));
 	if (!game)
-		return (9);
+		return (0);
+	play_game(game);
 	return (0);
 }
