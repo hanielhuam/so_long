@@ -6,7 +6,7 @@
 /*   By: hmacedo- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/10 21:04:49 by hmacedo-          #+#    #+#             */
-/*   Updated: 2025/05/12 21:21:10 by hmacedo-         ###   ########.fr       */
+/*   Updated: 2025/05/17 20:01:57 by hmacedo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,5 +34,9 @@ t_game	*make_game(char	**board);
 int		how_many(char c, char **board);
 void	whereis(char c, int *x, int *y, char **board);
 void	play_game(t_game *game);
+void	show_game(t_game *game);
+void	render_game(t_game *game);
+void	move_p(t_game *game);
+void	clear_game(t_game *game);
 
 #endif
