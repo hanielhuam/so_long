@@ -6,11 +6,12 @@
 /*   By: hmacedo- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/10 21:08:41 by hmacedo-          #+#    #+#             */
-/*   Updated: 2025/05/12 21:21:16 by hmacedo-         ###   ########.fr       */
+/*   Updated: 2025/05/19 19:04:46 by hmacedo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "so_long.h"
+#include <readline/readline.h>
 
 int	main(int argc, char **argv)
 {
@@ -23,6 +24,6 @@ int	main(int argc, char **argv)
 	//game = make_game(validate_board(treat_args(argv[1])));
 	if (!game)
 		return (0);
-	play_game(game);
+	//play_game(game);
 	return (0);
 }

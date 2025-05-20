@@ -1,20 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   how_many.c                                         :+:      :+:    :+:   */
+/*   whereis.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hmacedo- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/05/19 18:44:00 by hmacedo-          #+#    #+#             */
-/*   Updated: 2025/05/19 18:45:25 by hmacedo-         ###   ########.fr       */
+/*   Created: 2025/05/19 18:45:44 by hmacedo-          #+#    #+#             */
+/*   Updated: 2025/05/19 18:54:33 by hmacedo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "so_long.h"
 
-int     how_many(char c, char **board)
+void    whereis(char c, int *x, int *y, char **board)
 {
 	(void)c;
+	(void)x;
+	(void)y;
 	(void)board;
-	return (0);
 }

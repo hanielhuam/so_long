@@ -6,7 +6,7 @@
 /*   By: hmacedo- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/10 21:04:49 by hmacedo-          #+#    #+#             */
-/*   Updated: 2025/05/17 20:01:57 by hmacedo-         ###   ########.fr       */
+/*   Updated: 2025/05/19 21:12:40 by hmacedo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,12 +16,13 @@
 # include "get_next_line.h"
 # include "ft_printf.h"
 # include <fcntl.h>
+# include <stdio.h>
 
 typedef	struct	s_game
 {
 	char	**board;
 	int		collectables;
-	int		moviments;
+	int		movements;
 	int		px;
 	int		py;
 }				t_game;

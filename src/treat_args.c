@@ -7,11 +7,11 @@ char **treat_args(char	*file)
 	int	fd;
 	//validate file
 	//	verificar se é NULL ou ""
-	//		mensagem de erro "arquivo nulo"
+	//		mensagem de erro "empty file name"
 	//	verificar se a terminação é .ber
-	//		mensagem de erro
+	//		mensagem de erro "is not a .ber file"
 	//	tenta abrir o arquivo e retornar o fd.
-	//	caso de errado lançar um erro "Não possível abrir este arquivo"
+	//	caso de errado lançar um erro "was not possible to open this file"
 	//	o retorno da função ira retornar um inteiro maior que 0 no sucesso
 	fd = validate_file(file);
 	if (fd < 0)

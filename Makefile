@@ -11,7 +11,7 @@ SRCS = ${SRC_DIR}/so_long.c ${SRC_DIR}/treat_args.c \
 	   ${SRC_DIR}/validate_file.c ${SRC_DIR}/read_file.c \
 	   ${SRC_DIR}/validate_board.c ${SRC_DIR}/make_game.c \
 	   ${SRC_DIR}/how_many.c ${SRC_DIR}/play_game.c ${SRC_DIR}/clear_game.c \
-	   ${SRC_DIR}/move.c ${SRC_DIR}/render.c
+	   ${SRC_DIR}/move.c ${SRC_DIR}/render.c ${SRC_DIR}/whereis.c
 OBJS = ${SRCS:${SRC_DIR}/%.c=${OBJ_DIR}/%.o}
 
 NAME = so_long
@@ -19,7 +19,7 @@ NAME = so_long
 all: ${NAME}
 
 $(NAME): ${LIBFT} ${OBJS}
-	$(CC) ${CFLAGS} ${OBJS} ${LDFLAGS} -o ${NAME}
+	$(CC) ${CFLAGS} ${OBJS} ${LDFLAGS} -lreadline -o ${NAME}
 
 ${OBJ_DIR}/%.o: ${SRC_DIR}/%.c
 	mkdir -p $(dir $@)
