@@ -11,6 +11,7 @@
 /* ************************************************************************** */
 
 #include "so_long.h"
+#include <readline/readline.h>
 
 // retorna o resultado do check_move
 static int	move(t_game *game, char *str)
