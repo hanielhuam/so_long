@@ -32,6 +32,9 @@ typedef	struct	s_game
 char	**treat_args(char	*file);
 int		validate_file(char *file);
 char	**read_file_game(int fd);
+int		validate_caracters(char **board);
+int		validate_walls(char **board);
+int		validate_possible_path(char **board);
 char	**validate_board(char **board);
 t_game	*make_game(char	**board);
 int		how_many(char c, char **board);
