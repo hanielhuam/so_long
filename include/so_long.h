@@ -6,7 +6,7 @@
 /*   By: hmacedo- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/10 21:04:49 by hmacedo-          #+#    #+#             */
-/*   Updated: 2025/05/19 21:12:40 by hmacedo-         ###   ########.fr       */
+/*   Updated: 2025/05/20 21:22:46 by hmacedo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ typedef	struct	s_game
 
 char	**treat_args(char	*file);
 int		validate_file(char *file);
-char	**read_file(int fd);
+char	**read_file_game(int fd);
 char	**validate_board(char **board);
 t_game	*make_game(char	**board);
 int		how_many(char c, char **board);
