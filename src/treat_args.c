@@ -22,7 +22,5 @@ char **treat_args(char	*file)
 	board = read_file_game(fd);
 	if (!board)
 		return (NULL);
-	while (*board)
-		ft_printf("%s\n", *board++);
 	return (board);
 }

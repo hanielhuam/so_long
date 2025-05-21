@@ -25,9 +25,12 @@ static char	*joinall_lines(int fd)
 	{
 		free(s2);
 		s2 = get_next_line(fd);
-		result = ft_strjoin(s1, s2);
-		free(s1);
-		s1 = result;
+		if (s2)
+		{
+			result = ft_strjoin(s1, s2);
+			free(s1);
+			s1 = result;
+		}
 	}
 	free(s2);
 	return (result);

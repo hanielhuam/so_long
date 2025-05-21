@@ -18,6 +18,8 @@
 # include <fcntl.h>
 # include <stdio.h>
 
+# define SCOPE = "01ECPD";
+
 typedef	struct	s_game
 {
 	char	**board;

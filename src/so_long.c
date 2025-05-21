@@ -12,6 +12,12 @@
 
 #include "so_long.h"
 
+static void show_board(char **board)
+{
+	while (*board)
+		ft_printf("%s\n", *board++);
+}
+
 int	main(int argc, char **argv)
 {
 	//t_game	*game;
@@ -20,6 +26,9 @@ int	main(int argc, char **argv)
 	if (argc != 2)
 		return (0);
 	game = treat_args(argv[1]);
+	show_board(game);
+	if (validate_board(game))
+		ft_printf("OK\n");
 	//game = make_game(validate_board(treat_args(argv[1])));
 	if (!game)
 		return (0);

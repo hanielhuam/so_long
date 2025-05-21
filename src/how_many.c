@@ -14,7 +14,17 @@
 
 int     how_many(char c, char **board)
 {
-	(void)c;
-	(void)board;
-	return (0);
+	int	count;
+
+	count = 0;
+	while (*board)
+	{
+		while (**board)
+		{
+			if (**board++ == c)
+				count++;
+		}
+		*board++;
+	}
+	return (count);
 }
