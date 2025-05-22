@@ -6,7 +6,7 @@
 /*   By: hmacedo- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/19 18:07:29 by hmacedo-          #+#    #+#             */
-/*   Updated: 2025/05/19 18:13:16 by hmacedo-         ###   ########.fr       */
+/*   Updated: 2025/05/21 20:56:54 by hmacedo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,8 @@ char	**validate_board(char **board)
 {
 	if (!board)
 		return (NULL);
-	validate_caracters(board);
+	if (validate_caracters(board))
+		return (NULL);
 	//validate_walls(bourd);
 	// flood_fill
 	//validate_possible_path(board);

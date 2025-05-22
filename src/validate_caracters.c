@@ -1,4 +1,14 @@
-
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   validate_caracters.c                               :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: hmacedo- <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/05/21 20:54:24 by hmacedo-          #+#    #+#             */
+/*   Updated: 2025/05/21 21:18:22 by hmacedo-         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include "so_long.h"
 
@@ -12,13 +22,13 @@ static int	validate_scope(char **board)
 	{
 		while (**board)
 		{
-			if (!ft_strchr(SCOPE, **board++))
+			if (!ft_strchr(SCOPE, *(*board)++))
 			{
-				ft_putstr_fd("uso de caracter proibido", 2);
+				ft_putstr_fd("usage of forbidden caracter", 2);
 				return (1);
 			}
 		}
-		*board++;
+		(*board)++;
 	}
 	return (0);
 }

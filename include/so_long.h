@@ -6,7 +6,7 @@
 /*   By: hmacedo- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/10 21:04:49 by hmacedo-          #+#    #+#             */
-/*   Updated: 2025/05/20 21:22:46 by hmacedo-         ###   ########.fr       */
+/*   Updated: 2025/05/21 20:59:15 by hmacedo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 # include <fcntl.h>
 # include <stdio.h>
 
-# define SCOPE = "01ECPD";
+# define SCOPE "01ECPD"
 
 typedef	struct	s_game
 {
