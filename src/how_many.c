@@ -14,17 +14,21 @@
 
 int     how_many(char c, char **board)
 {
+	int	i;
+	int	j;
 	int	count;
 
+	i = 0;
 	count = 0;
-	while (*board)
+	while (board[i])
 	{
-		while (**board)
+		j = 0;
+		while (board[i][j])
 		{
-			if (**board++ == c)
+			if (board[i][j++] == c)
 				count++;
 		}
-		(*board)++;
+		i++;
 	}
 	return (count);
 }

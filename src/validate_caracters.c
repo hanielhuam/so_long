@@ -18,17 +18,22 @@
 
 static int	validate_scope(char **board)
 {
-	while (*board)
+	int	i;
+	int	j;
+
+	i = 0;
+	while (board[i])
 	{
-		while (**board)
+		j = 0;
+		while (board[i][j])
 		{
-			if (!ft_strchr(SCOPE, *(*board)++))
+			if (!ft_strchr(SCOPE, board[i][j++]))
 			{
 				ft_putstr_fd("usage of forbidden caracter", 2);
 				return (1);
 			}
 		}
-		(*board)++;
+		i++;
 	}
 	return (0);
 }

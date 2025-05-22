@@ -16,9 +16,8 @@ char	**validate_board(char **board)
 {
 	if (!board)
 		return (NULL);
-	if (validate_caracters(board))
+	if (validate_caracters(board) || validate_walls(board))
 		return (NULL);
-	//validate_walls(bourd);
 	// flood_fill
 	//validate_possible_path(board);
 	return (board);
