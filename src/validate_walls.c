@@ -6,7 +6,7 @@
 /*   By: hmacedo- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/21 21:02:13 by hmacedo-          #+#    #+#             */
-/*   Updated: 2025/05/21 21:02:47 by hmacedo-         ###   ########.fr       */
+/*   Updated: 2025/05/22 21:24:17 by hmacedo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 //	uma função para validar o tamanho das linhas se são iguais
 //	uma função para validar se as bordas do jogo são '1'
 
-static int	validate_lenght(**board)
+static int	validate_lenght(char **board)
 {
 	size_t	lenght;
 
@@ -37,16 +37,46 @@ static int	validate_lenght(**board)
 	return (0);
 }
 
+static int	validate_wall_line(char *line)
+{
+	while (*line)
+	{
+		if (*line++ != '1')
+			return (1);
+	}
+	return (0);
+}
+
 static int	validate_arround_walls(char **board)
 {
-	size_t	len_x;
-	size_t	len_y;
+	size_t	size;
 
+	if (validate_wall_line(*board))
+	{
+		ft_putstr_fd("not surrounded by walls\n", 2);
+		return (1);
+	}
+	while (*board)
+	{
+		size = ft_strlen(*board);
+		if ((*board)[0] != '1' || (*board)[size - 1] != '1')
+		{
+			ft_putstr_fd("not surrounded by walls\n", 2);
+			return (1);
+		}
+		board++;
+	}
+	if (validate_wall_line(board[-1]))
+	{
+		ft_putstr_fd("not surrounded by walls\n", 2);
+		return (1);
+	}
+	return (0);
 }
 
 int	validate_walls(char **board)
 {
-	if (validate_lenght(board), validate_arround_walls(board))
+	if (validate_lenght(board) || validate_arround_walls(board))
 		return (1);
 	return (0);	
 }
