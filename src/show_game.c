@@ -1,37 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   so_long.c                                          :+:      :+:    :+:   */
+/*   show_game.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hmacedo- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/05/10 21:08:41 by hmacedo-          #+#    #+#             */
-/*   Updated: 2025/05/24 22:02:53 by hmacedo-         ###   ########.fr       */
+/*   Created: 2025/05/24 21:57:29 by hmacedo-          #+#    #+#             */
+/*   Updated: 2025/05/24 22:02:45 by hmacedo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "so_long.h"
 
-static void show_board(char **board)
+void	show_board(char **board)
 {
-	while (*board)
-		ft_printf("%s\n", *board++);
+	
 }
 
-int	main(int argc, char **argv)
+void	show_game(t_game *game)
 {
-	//t_game	*game;
-	char	**game;
-
-	if (argc != 2)
-		return (0);
-	game = treat_args(argv[1]);
-	show_board(game);
-	if (validate_board(game))
-		ft_printf("OK\n");
-	//game = make_game(validate_board(treat_args(argv[1])));
-	if (!game)
-		return (0);
-	//play_game(game);
-	return (0);
+	(void)game;
 }
