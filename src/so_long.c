@@ -6,17 +6,11 @@
 /*   By: hmacedo- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/10 21:08:41 by hmacedo-          #+#    #+#             */
-/*   Updated: 2025/05/24 22:02:53 by hmacedo-         ###   ########.fr       */
+/*   Updated: 2025/05/25 20:49:02 by hmacedo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "so_long.h"
-
-static void show_board(char **board)
-{
-	while (*board)
-		ft_printf("%s\n", *board++);
-}
 
 int	main(int argc, char **argv)
 {

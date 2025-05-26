@@ -6,7 +6,7 @@
 /*   By: hmacedo- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/22 21:43:38 by hmacedo-          #+#    #+#             */
-/*   Updated: 2025/05/24 22:03:06 by hmacedo-         ###   ########.fr       */
+/*   Updated: 2025/05/25 21:53:59 by hmacedo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,20 +22,33 @@ static char	**copy_board(char **board)
 	while (board[count])
 		count++;
 	copy_board = calloc(count + 1, sizeof(char *));
-	if (!copy_boar)
+	if (!copy_board)
 		return (NULL);
-	i = 0
+	i = 0;
 	while (i < count)
 	{
 		copy_board[i] = ft_strdup(board[i]);
 		if (!copy_board[i])
 		{
-			clear_board(copy_board[0]);
+			clear_board(copy_board);
 			return (NULL);
 		}
 		i++;
 	}
 	return (copy_board);
+}
+
+static void	recursive_part(char **board, int i, int j)
+{
+	board[i][j] = 'X';
+	if (board[i + 1] && ft_strchr("CEP0", board[i + 1][j]))
+		recursive_part(board, i + 1, j);
+	if (board[i][j + 1] && ft_strchr("CEP0", board[i][j + 1]))
+		recursive_part(board, i, j + 1);
+	if ((i - 1) < 0 && ft_strchr("CEP0", board[i - 1][j]))
+		recursive_part(board, i - 1, j);
+	if ((j - 1) < 0 && ft_strchr("CEP0", board[i][j - 1]))
+		recursive_part(board, i, j - 1);
 }
 
 static int	flood_fill(char **board)
@@ -46,8 +59,13 @@ static int	flood_fill(char **board)
 	i = 0;
 	j = 0;
 	whereis('P', &i, &j, board);
-	recusive_part(board, i, j);
-	if (how_many('P', board) || how_many('C', board) || )
+	ft_printf("antes do flood_fill\n");
+	show_board(board);
+	recursive_part(board, i, j);
+	ft_printf("depois do flood_fill\n");
+	show_board(board);
+	if (how_many('P', board) || how_many('C', board) || how_many('E', board))
+		return (1);
 	return (0);
 }
 

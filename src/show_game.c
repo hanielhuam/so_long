@@ -6,7 +6,7 @@
 /*   By: hmacedo- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/24 21:57:29 by hmacedo-          #+#    #+#             */
-/*   Updated: 2025/05/24 22:02:45 by hmacedo-         ###   ########.fr       */
+/*   Updated: 2025/05/25 20:47:57 by hmacedo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,11 @@
 
 void	show_board(char **board)
 {
-	
+	while (*board)
+		ft_printf("%s\n", *board++);
 }
 
 void	show_game(t_game *game)
 {
-	(void)game;
+	show_board(game->board);
 }

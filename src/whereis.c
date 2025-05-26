@@ -6,16 +6,28 @@
 /*   By: hmacedo- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/19 18:45:44 by hmacedo-          #+#    #+#             */
-/*   Updated: 2025/05/19 18:54:33 by hmacedo-         ###   ########.fr       */
+/*   Updated: 2025/05/25 22:02:21 by hmacedo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "so_long.h"
 
-void    whereis(char c, int *x, int *y, char **board)
+void	whereis(char c, int *i, int *j, char **board)
 {
-	(void)c;
-	(void)x;
-	(void)y;
-	(void)board;
+	if (!i || !j)
+		return ;
+	*i = 0;
+	while (board[*i])
+	{
+		*j = 0;
+		while (board[*i][*j])
+		{
+			if (board[*i][*j] == c)
+				return ;
+			(*j)++;
+		}
+		(*i)++;
+	}
+	*i = -1;
+	*j = -1;
 }
