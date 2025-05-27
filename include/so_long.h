@@ -6,7 +6,7 @@
 /*   By: hmacedo- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/10 21:04:49 by hmacedo-          #+#    #+#             */
-/*   Updated: 2025/05/24 22:03:10 by hmacedo-         ###   ########.fr       */
+/*   Updated: 2025/05/26 21:05:12 by hmacedo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,7 @@ typedef	struct	s_game
 	int		movements;
 	int		px;
 	int		py;
+	int		over_end;
 }				t_game;
 
 char	**treat_args(char	*file);
@@ -43,7 +44,7 @@ void	play_game(t_game *game);
 void	show_game(t_game *game);
 void	show_board(char **board);
 void	render_game(t_game *game);
-void	move_p(t_game *game);
+void	move_p(t_game *game, int i, int j);
 void	clear_game(t_game *game);
 void	clear_board(char **board);
 
