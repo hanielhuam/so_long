@@ -14,5 +14,5 @@
 
 void    render_game(t_game *game)
 {
-	(void)game;	
+	show_board(game);
 }
