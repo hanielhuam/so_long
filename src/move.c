@@ -12,7 +12,23 @@
 
 #include "so_long.h"
 
-static void	move_player(t_game game, int i, int j)
+static void	touch_devil(t_game *game)
+{
+	if (game->over_end)
+		game->board[game->px][game->py] = 'E';
+	else
+		game->board[game->px][game->py] = '0';
+	game->touch_devil = 1;
+	game->movements++;
+}
+
+static void	update_p_location(t_game *game, int i, int j)
+{
+	game->px = i;
+	game->py = j;
+}
+
+static void	move_player(t_game *game, int i, int j)
 {
 	if (game->over_end)
 	{
@@ -22,7 +38,8 @@ static void	move_player(t_game game, int i, int j)
 	else
 		game->board[game->px][game->py] = '0';
 	game->board[i][j] = 'P';
-	game->moviments++;
+	game->movements++;
+	update_p_location(game, i, j);
 }
 
 void	move_p(t_game *game, int i, int j)
@@ -45,9 +62,5 @@ void	move_p(t_game *game, int i, int j)
 		game->over_end = 1;
 	}
 	if (c == 'D')
-	{
-		game->board[game->px][game->py] = '0';
-		game->touch_devil = 1;
-		game->moviments++;
-	}
+		touch_devil(game);
 }

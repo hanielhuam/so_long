@@ -30,5 +30,7 @@ t_game	*make_game(char	**board)
 	game->movements = 0;
 	whereis('P', &game->px, &game->py, game->board);
 	game->over_end = 0;
+	game->is_finish = 0;
+	game->touch_devil = 0;
 	return (game);
 }

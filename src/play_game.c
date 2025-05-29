@@ -13,26 +13,19 @@
 #include "so_long.h"
 #include <readline/readline.h>
 
-static int	move(t_game *game, char *str)
+static void	move(t_game *game, char *str)
 {
 		if (!ft_strncmp(str, "a", 2))
-			return (move_p(game, 0, -1));
+			move_p(game, 0, -1);
 		else if (!ft_strncmp(str, "s", 2))
-			return (move_p(game, 1, 0));
+			move_p(game, 1, 0);
 		else if (!ft_strncmp(str, "w", 2))
-			return (move_p(game, -1, 0));
-		else (!ft_strncmp(str, "d", 2))
-			return (move_p(game, 0, 1));
+			move_p(game, -1, 0);
+		else if (!ft_strncmp(str, "d", 2))
+			move_p(game, 0, 1);
 }
 
-static void	finish_game(t_game *game, char *str)
-{
-	clear_game(game);
-	if (str)
-		free(str);
-}
-
-void	play_gane(t_game *game)
+void	play_game(t_game *game)
 {
 	char	*str;
 
@@ -41,19 +34,18 @@ void	play_gane(t_game *game)
 	if (!str)
 	{
 		clear_game(game);
-		return;
+		return ;
 	}
 	while (ft_strncmp(str, "q", 2))
 	{
-		if (move(game, str) > 0)
-			break;
+		move(game, str);
 		render_game(game);
-		is_end(game)
+		is_end(game);
 		str = readline("Enter imput: ");
 		if (!str)
 		{
 			clear_game(game);
-			return;
+			return ;
 		}
 	}
 	finish_game(game, str);

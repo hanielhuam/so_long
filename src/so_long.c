@@ -23,6 +23,5 @@ int	main(int argc, char **argv)
 		return (0);
 	show_game(game);
 	play_game(game);
-	clear_game(game);
 	return (0);
 }

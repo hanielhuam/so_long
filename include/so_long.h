@@ -48,7 +48,7 @@ void	show_board(char **board);
 void	render_game(t_game *game);
 void	move_p(t_game *game, int i, int j);
 void	is_end(t_game *game);
-void	finish_game(t_game *game);
+void	finish_game(t_game *game, char *str);
 void	clear_game(t_game *game);
 void	clear_board(char **board);
 
