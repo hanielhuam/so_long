@@ -41,6 +41,7 @@ void	play_game(t_game *game)
 		move(game, str);
 		render_game(game);
 		is_end(game);
+		free(str);
 		str = readline("Enter imput: ");
 		if (!str)
 		{
@@ -48,5 +49,6 @@ void	play_game(t_game *game)
 			return ;
 		}
 	}
-	finish_game(game, str);
+	free(str);
+	clear_game(game);
 }

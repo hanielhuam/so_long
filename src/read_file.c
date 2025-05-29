@@ -49,6 +49,7 @@ char    **read_file_game(int fd)
 		return (NULL);
 	}
 	split = ft_split(join, '\n');
+	free(join);
 	if (!split || !split[0])
 	{
 		if (split)
