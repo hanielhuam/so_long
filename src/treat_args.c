@@ -12,10 +12,11 @@
 
 #include	"so_long.h"
 
-char **treat_args(char	*file)
+char	**treat_args(char	*file)
 {
 	char	**board;
-	int	fd;
+	int		fd;
+
 	fd = validate_file(file);
 	if (fd < 0)
 		return (NULL);

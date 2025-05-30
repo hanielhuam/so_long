@@ -58,7 +58,7 @@ void	move_p(t_game *game, int i, int j)
 	}
 	if (c == 'E')
 	{
-		move_player(game, game->px + i, game->py +j);
+		move_player(game, game->px + i, game->py + j);
 		game->over_end = 1;
 	}
 	if (c == 'D')

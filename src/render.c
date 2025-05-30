@@ -12,7 +12,7 @@
 
 #include "so_long.h"
 
-void    render_game(t_game *game)
+void	render_game(t_game *game)
 {
 	show_board(game->board);
 }

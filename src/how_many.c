@@ -12,7 +12,7 @@
 
 #include "so_long.h"
 
-int     how_many(char c, char **board)
+int	how_many(char c, char **board)
 {
 	int	i;
 	int	j;

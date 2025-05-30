@@ -12,7 +12,7 @@
 
 #include "so_long.h"
 
-int     validate_file(char *file)
+int	validate_file(char *file)
 {
 	int		fd;
 	char	*temp;

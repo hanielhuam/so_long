@@ -15,14 +15,14 @@
 
 static void	move(t_game *game, char *str)
 {
-		if (!ft_strncmp(str, "a", 2))
-			move_p(game, 0, -1);
-		else if (!ft_strncmp(str, "s", 2))
-			move_p(game, 1, 0);
-		else if (!ft_strncmp(str, "w", 2))
-			move_p(game, -1, 0);
-		else if (!ft_strncmp(str, "d", 2))
-			move_p(game, 0, 1);
+	if (!ft_strncmp(str, "a", 2))
+		move_p(game, 0, -1);
+	else if (!ft_strncmp(str, "s", 2))
+		move_p(game, 1, 0);
+	else if (!ft_strncmp(str, "w", 2))
+		move_p(game, -1, 0);
+	else if (!ft_strncmp(str, "d", 2))
+		move_p(game, 0, 1);
 }
 
 void	play_game(t_game *game)

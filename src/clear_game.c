@@ -14,7 +14,7 @@
 
 void	clear_board(char **board)
 {
-	char **init;
+	char	**init;
 
 	init = board;
 	while (*board)
@@ -22,7 +22,7 @@ void	clear_board(char **board)
 	free(init);
 }
 
-void    clear_game(t_game *game)
+void	clear_game(t_game *game)
 {
 	clear_board(game->board);
 	free(game);

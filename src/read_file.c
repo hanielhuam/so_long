@@ -17,7 +17,7 @@ static char	*joinall_lines(int fd)
 	char	*s1;
 	char	*s2;
 	char	*result;
-	
+
 	s2 = get_next_line(fd);
 	result = ft_strjoin("", s2);
 	s1 = result;
@@ -36,7 +36,7 @@ static char	*joinall_lines(int fd)
 	return (result);
 }
 
-char    **read_file_game(int fd)
+char	**read_file_game(int fd)
 {
 	char	*join;
 	char	**split;

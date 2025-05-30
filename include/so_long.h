@@ -20,7 +20,7 @@
 
 # define SCOPE "01ECPD"
 
-typedef	struct	s_game
+typedef struct s_game
 {
 	char	**board;
 	int		collectables;
@@ -30,7 +30,7 @@ typedef	struct	s_game
 	int		over_end;
 	int		is_finish;
 	int		touch_devil;
-}				t_game;
+}			t_game;
 
 char	**treat_args(char	*file);
 int		validate_file(char *file);
