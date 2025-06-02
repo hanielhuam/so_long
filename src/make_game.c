@@ -11,6 +11,19 @@
 /* ************************************************************************** */
 
 #include "so_long.h"
+#include "mlx.h"
+
+static	void	init_render(t_game *gam)
+{
+	game->mlx = mlx_init();
+	game->window = mlx_new_window(game->mlx,\
+			WINDOW_WIDTH, WIDOW_HEIGHT, "so_long");
+	env.addr = mlx_get_data_addr(env.img, &env.bits_per_pixel, &env.line_length, &env.endian);
+	mlx_hook(env.win, 4, 0, mouse_handler, &env);
+	mlx_hook(env.win, 2, 1L << 0, key_handler, &env);
+	mlx_hook(env.win, 17, 1L << 0, close_window, &env);
+	mlx_loop_hook(game->mlx, animation_handler, game);
+}
 
 t_game	*make_game(char	**board)
 {
@@ -32,5 +45,6 @@ t_game	*make_game(char	**board)
 	game->over_end = 0;
 	game->is_finish = 0;
 	game->touch_devil = 0;
+	init_render(game);
 	return (game);
 }

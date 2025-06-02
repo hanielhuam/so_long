@@ -15,13 +15,18 @@
 
 # include "get_next_line.h"
 # include "ft_printf.h"
+# include "mlx.h"
 # include <fcntl.h>
 # include <stdio.h>
 
 # define SCOPE "01ECPD"
+# define WINDOW_WIDTH 1920
+# define WIDOW_HEIGHT 1080
 
 typedef struct s_game
 {
+	void	*mlx;
+	void	*window;
 	char	**board;
 	int		collectables;
 	int		movements;
