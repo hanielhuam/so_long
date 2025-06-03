@@ -6,7 +6,7 @@
 /*   By: hmacedo- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/10 21:04:49 by hmacedo-          #+#    #+#             */
-/*   Updated: 2025/05/26 21:05:12 by hmacedo-         ###   ########.fr       */
+/*   Updated: 2025/06/02 21:32:03 by hmacedo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,23 @@
 
 # define SCOPE "01ECPD"
 # define WINDOW_WIDTH 1920
-# define WIDOW_HEIGHT 1080
+# define WINDOW_HEIGHT 1080
+# define DOOR_OPEN "assests/door_open.xpm"
+# define DOOR_CLOSE "assests/closed_door.xpm"
+# define BACKGROUND "assests/background.xpm"
+# define CARACTER "assests/caracter.xpm"
+# define COLLECTABLES "assests/collectables.xpm"
+# define ENEMY "assests/enemy.xpm"
+# define TREE_1 "assests/tree_1.xpm"
+# define TREE_2 "assests/tree_2.xpm"
+# define TREE_3 "assests/tree_3.xpm"
+
+typedef struct s_mlx
+{
+	void	*mlx;
+	void	*window;
+
+}
 
 typedef struct s_game
 {

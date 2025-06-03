@@ -6,20 +6,18 @@
 /*   By: hmacedo- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/26 20:43:54 by hmacedo-          #+#    #+#             */
-/*   Updated: 2025/05/26 21:06:30 by hmacedo-         ###   ########.fr       */
+/*   Updated: 2025/06/02 21:31:53 by hmacedo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "so_long.h"
-#include "mlx.h"
+//#include "mlx.h"
 
 static	void	init_render(t_game *gam)
 {
 	game->mlx = mlx_init();
 	game->window = mlx_new_window(game->mlx,\
 			WINDOW_WIDTH, WIDOW_HEIGHT, "so_long");
-	env.addr = mlx_get_data_addr(env.img, &env.bits_per_pixel, &env.line_length, &env.endian);
-	mlx_hook(env.win, 4, 0, mouse_handler, &env);
 	mlx_hook(env.win, 2, 1L << 0, key_handler, &env);
 	mlx_hook(env.win, 17, 1L << 0, close_window, &env);
 	mlx_loop_hook(game->mlx, animation_handler, game);
