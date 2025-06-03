@@ -14,9 +14,20 @@
 
 void	key_handler(t_game *game)
 {
-	
+	(void)game;
 }
 
+void	close_window(t_game *game)
+{
+	(void)game;
+}
+
+void	close_window(t_game *game)
+{
+	(void)game;
+}
+/*
 mlx_hook(env.win, 2, 1L << 0, key_handler, &env);
 mlx_hook(env.win, 17, 1L << 0, close_window, &env);
 mlx_loop_hook(game->mlx, animation_handler, game);
+*/

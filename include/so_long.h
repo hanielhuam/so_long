@@ -32,17 +32,30 @@
 # define TREE_2 "assests/tree_2.xpm"
 # define TREE_3 "assests/tree_3.xpm"
 
+typedef struct s_asset
+{
+	void	*door_open;
+	void	*door_closed;
+	void	*tree_1;
+	void	*tree_2;
+	void	*tree_3;
+}
+
 typedef struct s_mlx
 {
 	void	*mlx;
 	void	*window;
-
-}
+	void	*caracter;
+	void	*background;
+	void	*enemy;
+	void	*door;
+	void	*collectable;
+	t_asset	*assets;
+}			t_mlx
 
 typedef struct s_game
 {
-	void	*mlx;
-	void	*window;
+	t_mlx	*mlx;
 	char	**board;
 	int		collectables;
 	int		movements;
@@ -72,5 +85,8 @@ void	is_end(t_game *game);
 void	finish_game(t_game *game, char *str);
 void	clear_game(t_game *game);
 void	clear_board(char **board);
+void	key_handler(t_game *game);
+void	close_window(t_game *game);
+void	animation_handler(t_game *game);
 
 #endif
