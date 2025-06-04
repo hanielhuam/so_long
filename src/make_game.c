@@ -15,12 +15,12 @@
 
 static	void	init_render(t_game *gam)
 {
-	game->mlx = mlx_init();
-	game->window = mlx_new_window(game->mlx,\
+	game->mlx->mlx = mlx_init();
+	game->mlx->window = mlx_new_window(game->mlx,\
 			WINDOW_WIDTH, WIDOW_HEIGHT, "so_long");
-	mlx_hook(env.win, 2, 1L << 0, key_handler, &env);
-	mlx_hook(env.win, 17, 1L << 0, close_window, &env);
-	mlx_loop_hook(game->mlx, animation_handler, game);
+	mlx_hook(game->mlx->window, 2, 1L << 0, key_handler, &env);
+	mlx_hook(game->mlx->window, 17, 1L << 0, close_window, &env);
+	mlx_loop_hook(game->mlx->nlx, animation_handler, game);
 }
 
 t_game	*make_game(char	**board)

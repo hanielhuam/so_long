@@ -21,7 +21,7 @@ int	main(int argc, char **argv)
 	game = make_game(validate_board(treat_args(argv[1])));
 	if (!game)
 		return (0);
-	show_game(game);
-	play_game(game);
+	render(game);
+	mlx_loop(game->malx->mlx);
 	return (0);
 }

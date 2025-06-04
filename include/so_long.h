@@ -22,6 +22,8 @@
 # define SCOPE "01ECPD"
 # define WINDOW_WIDTH 1920
 # define WINDOW_HEIGHT 1080
+# define ASSET_WIDTH 32
+# define ASSET_HEIGHT 32
 # define DOOR_OPEN "assests/door_open.xpm"
 # define DOOR_CLOSE "assests/closed_door.xpm"
 # define BACKGROUND "assests/background.xpm"
@@ -39,7 +41,7 @@ typedef struct s_asset
 	void	*tree_1;
 	void	*tree_2;
 	void	*tree_3;
-}
+}			t_asset
 
 typedef struct s_mlx
 {
@@ -64,6 +66,7 @@ typedef struct s_game
 	int		over_end;
 	int		is_finish;
 	int		touch_devil;
+	int		animation_count;
 }			t_game;
 
 char	**treat_args(char	*file);
@@ -85,7 +88,7 @@ void	is_end(t_game *game);
 void	finish_game(t_game *game, char *str);
 void	clear_game(t_game *game);
 void	clear_board(char **board);
-void	key_handler(t_game *game);
+void	key_handler(int keycode, t_game *game);
 void	close_window(t_game *game);
 void	animation_handler(t_game *game);
 
