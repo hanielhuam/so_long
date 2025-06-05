@@ -28,7 +28,7 @@
 # define DOOR_CLOSE "assests/closed_door.xpm"
 # define BACKGROUND "assests/background.xpm"
 # define CARACTER "assests/caracter.xpm"
-# define COLLECTABLES "assests/collectables.xpm"
+# define COLLECTABLE "assests/collectables.xpm"
 # define ENEMY "assests/enemy.xpm"
 # define TREE_1 "assests/tree_1.xpm"
 # define TREE_2 "assests/tree_2.xpm"
@@ -52,6 +52,7 @@ typedef struct s_mlx
 	void	*enemy;
 	void	*door;
 	void	*collectable;
+	void	*tree;
 	t_asset	*assets;
 }			t_mlx
 
