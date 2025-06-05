@@ -6,23 +6,23 @@
 /*   By: hmacedo- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/02 17:30:04 by hmacedo-          #+#    #+#             */
-/*   Updated: 2025/06/02 21:31:58 by hmacedo-         ###   ########.fr       */
+/*   Updated: 2025/06/04 21:19:15 by hmacedo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "so_long.h"
 
-void	key_handler(t_game *game)
+int	key_handler(int keycode, t_game *game)
+{
+	
+}
+
+int	close_window(int keycode, t_game *game)
 {
 	(void)game;
 }
 
-void	close_window(t_game *game)
-{
-	(void)game;
-}
-
-void	close_window(t_game *game)
+int	annimation_handler(t_game *game)
 {
 	(void)game;
 }

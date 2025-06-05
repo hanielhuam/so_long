@@ -6,7 +6,7 @@
 /*   By: hmacedo- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/10 21:04:49 by hmacedo-          #+#    #+#             */
-/*   Updated: 2025/06/02 21:32:03 by hmacedo-         ###   ########.fr       */
+/*   Updated: 2025/06/04 20:59:05 by hmacedo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -88,8 +88,8 @@ void	is_end(t_game *game);
 void	finish_game(t_game *game, char *str);
 void	clear_game(t_game *game);
 void	clear_board(char **board);
-void	key_handler(int keycode, t_game *game);
-void	close_window(t_game *game);
-void	animation_handler(t_game *game);
+int		key_handler(int keycode, t_game *game);
+int		close_window(t_game *game);
+int		annimation_handler(t_game *game);
 
 #endif
