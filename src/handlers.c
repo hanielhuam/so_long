@@ -33,12 +33,19 @@ int	key_handler(int keycode, t_game *game)
 
 int	close_window(int keycode, t_game *game)
 {
-	(void)game;
+	clear_game(game);
 }
 
 int	annimation_handler(t_game *game)
 {
-	(void)game;
+	if (game->annimation_count % 3 == 0)
+		game->mlx->tree = game->mlx->assets->tree_1;
+	if (game->annimation_count % 3 == 1)
+		game->mlx->tree = game->mlx->assets->tree_2;
+	if (game->annimation_count % 3 == 2)
+		game->mlx->tree = game->mlx->assets->tree_3;
+	game->annimation_count++;
+	render(game);
 }
 /*
 mlx_hook(env.win, 2, 1L << 0, key_handler, &env);
