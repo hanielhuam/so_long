@@ -6,7 +6,7 @@
 /*   By: hmacedo- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/26 20:43:54 by hmacedo-          #+#    #+#             */
-/*   Updated: 2025/06/04 21:19:07 by hmacedo-         ###   ########.fr       */
+/*   Updated: 2025/06/05 21:54:00 by hmacedo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,7 +63,7 @@ static t_mlx	*init_render(t_game *game)
 		ft_putstr_fd("Allocation Error\n", 2);
 		return (NULL);
 	}
-	assests = ft_calloc(1, sizeof(t_asset));
+	assets = ft_calloc(1, sizeof(t_asset));
 	if (!assets)
 	{
 		ft_putstr_fd("Allocation Error\n", 2);

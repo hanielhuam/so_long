@@ -10,8 +10,8 @@ INCLUDE = -Iinclude -I${LIBFT_DIR}/include -Imlx_linux
 SRCS = ${SRC_DIR}/so_long.c ${SRC_DIR}/treat_args.c \
 	   ${SRC_DIR}/validate_file.c ${SRC_DIR}/read_file.c \
 	   ${SRC_DIR}/validate_board.c ${SRC_DIR}/make_game.c \
-	   ${SRC_DIR}/how_many.c ${SRC_DIR}/play_game.c ${SRC_DIR}/clear_game.c \
-	   ${SRC_DIR}/move.c ${SRC_DIR}/render.c ${SRC_DIR}/whereis.c \
+	   ${SRC_DIR}/how_many.c ${SRC_DIR}/clear_game.c ${SRC_DIR}/move.c \
+	   ${SRC_DIR}/render.c ${SRC_DIR}/whereis.c \
 	   ${SRC_DIR}/validate_caracters.c ${SRC_DIR}/validate_walls.c \
 	   ${SRC_DIR}/validate_possible_path.c ${SRC_DIR}/show_game.c \
 	   ${SRC_DIR}/finish.c ${SRC_DIR}/handlers.c

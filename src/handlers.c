@@ -6,7 +6,7 @@
 /*   By: hmacedo- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/02 17:30:04 by hmacedo-          #+#    #+#             */
-/*   Updated: 2025/06/04 21:19:15 by hmacedo-         ###   ########.fr       */
+/*   Updated: 2025/06/05 22:01:16 by hmacedo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,21 @@
 
 int	key_handler(int keycode, t_game *game)
 {
-	
+	if (keycode == 55)
+	{
+		close_window(keycode, game);
+		return (0);
+	}
+	else if (keycode == 0 || keycode == 123)
+		move_p(game, 0, -1);
+	else if (keycode == 1 || keycode == 125)
+		move_p(game, 1, 0);
+	else if (keycode == 13 || keycode == 126)
+		move_p(game, -1, 0);
+	else if (keycode == 2 || keycode == 124)
+		move_p(game, 0, 1);
+	is_end(game);
+	render_game(game);
 }
 
 int	close_window(int keycode, t_game *game)
