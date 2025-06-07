@@ -14,7 +14,7 @@ SRCS = ${SRC_DIR}/so_long.c ${SRC_DIR}/treat_args.c \
 	   ${SRC_DIR}/render.c ${SRC_DIR}/whereis.c \
 	   ${SRC_DIR}/validate_caracters.c ${SRC_DIR}/validate_walls.c \
 	   ${SRC_DIR}/validate_possible_path.c ${SRC_DIR}/show_game.c \
-	   ${SRC_DIR}/is_end.c ${SRC_DIR}/handlers.c
+	   ${SRC_DIR}/is_end.c ${SRC_DIR}/handlers.c ${SRC_DIR}/draw_tile.c
 	   
 OBJS = ${SRCS:${SRC_DIR}/%.c=${OBJ_DIR}/%.o}
 
