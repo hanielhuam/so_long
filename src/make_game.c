@@ -12,7 +12,7 @@
 
 #include "so_long.h"
 
-static	void	init_assets(t_mlx mlx)
+static	void	init_assets(t_mlx *mlx)
 {
 	int	img_width;
 	int	img_height;
@@ -35,7 +35,7 @@ static	void	init_assets(t_mlx mlx)
 			TREE_1, &img_width, &img_height);
 	mlx->assets->tree_2 = mlx_xpm_file_to_image(mlx->mlx, \
 			TREE_2, &img_width, &img_height);
-	mlx->assets->tree_3 = mlx_xpm_file_to_image(mlxi->mlx, \
+	mlx->assets->tree_3 = mlx_xpm_file_to_image(mlx->mlx, \
 			TREE_3, &img_width, &img_height);
 }
 
@@ -43,11 +43,11 @@ static void	init_config_mlx(t_mlx *mlx, t_game *game)
 {
 	mlx->mlx = mlx_init();
 	mlx->window = mlx_new_window(mlx->mlx, \
-			WINDOW_WIDTH, WIDOW_HEIGHT, "so_long");
+			WINDOW_WIDTH, WINDOW_HEIGHT, "so_long");
 	mlx_key_hook(mlx->window, key_handler, &game);
 	mlx_hook(mlx->window, 17, 1L << 0, close_window, &game);
-	mlx_loop_hook(mlx->nlx, annimation_handler, &game);
-	init_assets(assets);
+	mlx_loop_hook(mlx->mlx, annimation_handler, &game);
+	init_assets(mlx);
 	mlx->door = mlx->assets->door_closed;
 	mlx->tree = mlx->assets->tree_1;
 }

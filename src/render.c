@@ -12,7 +12,7 @@
 
 #include "so_long.h"
 
-void	print_tile(t_game *game, int i, int j)
+static void	print_tile(t_game *game, int i, int j)
 {
 	if (game->board[i][j] == '1')
 		draw_tile(game->mlx, game->mlx->tree, i, j);
@@ -39,7 +39,7 @@ void	render_game(t_game *game)
 		j = 0;
 		while (game->board[i][j])
 		{
-			print_tile(game);
+			print_tile(game, i, j);
 			j++;
 		}
 		i++;

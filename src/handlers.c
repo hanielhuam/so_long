@@ -28,12 +28,15 @@ int	key_handler(int keycode, t_game *game)
 	else if (keycode == 2 || keycode == 124)
 		move_p(game, 0, 1);
 	is_end(game);
-	render_game(game);
+	render(game);
+	return (0);
 }
 
 int	close_window(int keycode, t_game *game)
 {
+	(void)keycode;
 	clear_game(game);
+	return (0);
 }
 
 int	annimation_handler(t_game *game)
@@ -46,9 +49,5 @@ int	annimation_handler(t_game *game)
 		game->mlx->tree = game->mlx->assets->tree_3;
 	game->annimation_count++;
 	render(game);
+	return (0);
 }
-/*
-mlx_hook(env.win, 2, 1L << 0, key_handler, &env);
-mlx_hook(env.win, 17, 1L << 0, close_window, &env);
-mlx_loop_hook(game->mlx, animation_handler, game);
-*/

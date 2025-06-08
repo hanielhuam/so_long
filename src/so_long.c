@@ -22,6 +22,6 @@ int	main(int argc, char **argv)
 	if (!game)
 		return (0);
 	render(game);
-	mlx_loop(game->malx->mlx);
+	mlx_loop(game->mlx->mlx);
 	return (0);
 }

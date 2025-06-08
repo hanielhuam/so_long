@@ -41,7 +41,7 @@ typedef struct s_asset
 	void	*tree_1;
 	void	*tree_2;
 	void	*tree_3;
-}			t_asset
+}			t_asset;
 
 typedef struct s_mlx
 {
@@ -54,7 +54,7 @@ typedef struct s_mlx
 	void	*collectable;
 	void	*tree;
 	t_asset	*assets;
-}			t_mlx
+}			t_mlx;
 
 typedef struct s_game
 {
@@ -67,7 +67,7 @@ typedef struct s_game
 	int		over_end;
 	int		is_finish;
 	int		touch_devil;
-	int		animation_count;
+	int		annimation_count;
 }			t_game;
 
 char	**treat_args(char	*file);
@@ -82,7 +82,7 @@ int		how_many(char c, char **board);
 void	whereis(char c, int *x, int *y, char **board);
 void	show_game(t_game *game);
 void	show_board(char **board);
-void	render_game(t_game *game);
+void	render(t_game *game);
 void	draw_tile(t_mlx *mlx, void *img, int i, int j);
 void	move_p(t_game *game, int i, int j);
 void	is_end(t_game *game);
