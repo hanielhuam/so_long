@@ -6,7 +6,7 @@
 /*   By: hmacedo- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/10 21:04:49 by hmacedo-          #+#    #+#             */
-/*   Updated: 2025/06/06 22:03:48 by hmacedo-         ###   ########.fr       */
+/*   Updated: 2025/06/08 19:35:54 by hmacedo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,15 +24,15 @@
 # define WINDOW_HEIGHT 1080
 # define ASSET_WIDTH 32
 # define ASSET_HEIGHT 32
-# define DOOR_OPEN "assests/door_open.xpm"
-# define DOOR_CLOSE "assests/closed_door.xpm"
-# define BACKGROUND "assests/background.xpm"
-# define CARACTER "assests/caracter.xpm"
-# define COLLECTABLE "assests/collectables.xpm"
-# define ENEMY "assests/enemy.xpm"
-# define TREE_1 "assests/tree_1.xpm"
-# define TREE_2 "assests/tree_2.xpm"
-# define TREE_3 "assests/tree_3.xpm"
+# define DOOR_OPEN "assets/door_open.xpm"
+# define DOOR_CLOSE "assets/closed_door.xpm"
+# define BACKGROUND "assets/background.xpm"
+# define CARACTER "assets/caracter.xpm"
+# define COLLECTABLE "assets/background.xpm"
+# define ENEMY "assets/enemy.xpm"
+# define TREE_1 "assets/tree_1.xpm"
+# define TREE_2 "assets/tree_2.xpm"
+# define TREE_3 "assets/tree_3.xpm"
 
 typedef struct s_asset
 {
@@ -84,6 +84,7 @@ void	show_game(t_game *game);
 void	show_board(char **board);
 void	render(t_game *game);
 void	draw_tile(t_mlx *mlx, void *img, int i, int j);
+void	draw_word(t_mlx *mlx, int moves);
 void	move_p(t_game *game, int i, int j);
 void	is_end(t_game *game);
 void	clear_game(t_game *game);

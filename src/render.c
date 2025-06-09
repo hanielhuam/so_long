@@ -6,7 +6,7 @@
 /*   By: hmacedo- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/19 18:21:26 by hmacedo-          #+#    #+#             */
-/*   Updated: 2025/06/06 22:03:39 by hmacedo-         ###   ########.fr       */
+/*   Updated: 2025/06/08 18:49:14 by hmacedo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ static void	print_tile(t_game *game, int i, int j)
 		draw_tile(game->mlx, game->mlx->caracter, i, j);
 }
 
-void	render_game(t_game *game)
+void	render(t_game *game)
 {
 	int	i;
 	int	j;
@@ -44,4 +44,5 @@ void	render_game(t_game *game)
 		}
 		i++;
 	}
+	draw_word(game->mlx, game->movements);
 }

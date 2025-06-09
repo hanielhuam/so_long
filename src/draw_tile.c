@@ -6,7 +6,7 @@
 /*   By: hmacedo- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/05 21:54:10 by hmacedo-          #+#    #+#             */
-/*   Updated: 2025/06/06 22:03:36 by hmacedo-         ###   ########.fr       */
+/*   Updated: 2025/06/08 21:12:51 by hmacedo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,15 @@
 void	draw_tile(t_mlx *mlx, void *img, int i, int j)
 {
 	mlx_put_image_to_window(\
-			mlx->mlx, mlx->window, img, i * ASSET_WIDTH, j * ASSET_HEIGHT);
+			mlx->mlx, mlx->window, img, j * ASSET_WIDTH, i * ASSET_HEIGHT);
 }
 
-void	draw_word(t_mlx *mlx,)
+void	draw_word(t_mlx *mlx, int moves)
+{
+	char	*str;
+
+	str = ft_itoa(moves);
+	mlx_string_put(mlx->mlx, mlx->window, 25, 20, 0x000000, "MOVES: ");
+	mlx_string_put(mlx->mlx, mlx->window, 70, 20, 0x000000, str);
+	free(str);
+}

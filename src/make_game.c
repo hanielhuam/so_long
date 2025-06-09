@@ -6,7 +6,7 @@
 /*   By: hmacedo- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/26 20:43:54 by hmacedo-          #+#    #+#             */
-/*   Updated: 2025/06/05 21:54:00 by hmacedo-         ###   ########.fr       */
+/*   Updated: 2025/06/08 19:48:42 by hmacedo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,8 @@ static	void	init_assets(t_mlx *mlx)
 	int	img_width;
 	int	img_height;
 
-	img_width = 0;
-	img_height = 0;
+	img_width = ASSET_WIDTH;
+	img_height = ASSET_HEIGHT;
 	mlx->caracter = mlx_xpm_file_to_image(mlx->mlx,\
 			CARACTER, &img_width, &img_height);
 	mlx->enemy = mlx_xpm_file_to_image(mlx->mlx,\
@@ -29,7 +29,7 @@ static	void	init_assets(t_mlx *mlx)
 			DOOR_OPEN, &img_width, &img_height);
 	mlx->assets->door_closed = mlx_xpm_file_to_image(mlx->mlx,\
 			DOOR_CLOSE, &img_width, &img_height);
-	mlx->background = mlx_xpm_file_to_image(mlx, \
+	mlx->background = mlx_xpm_file_to_image(mlx->mlx, \
 			BACKGROUND, &img_width, &img_height);
 	mlx->assets->tree_1 = mlx_xpm_file_to_image(mlx->mlx, \
 			TREE_1, &img_width, &img_height);
@@ -44,9 +44,9 @@ static void	init_config_mlx(t_mlx *mlx, t_game *game)
 	mlx->mlx = mlx_init();
 	mlx->window = mlx_new_window(mlx->mlx, \
 			WINDOW_WIDTH, WINDOW_HEIGHT, "so_long");
-	mlx_key_hook(mlx->window, key_handler, &game);
-	mlx_hook(mlx->window, 17, 1L << 0, close_window, &game);
-	mlx_loop_hook(mlx->mlx, annimation_handler, &game);
+	mlx_key_hook(mlx->window, key_handler, game);
+	mlx_hook(mlx->window, 17, 1L << 0, close_window, game);
+	mlx_loop_hook(mlx->mlx, annimation_handler, game);
 	init_assets(mlx);
 	mlx->door = mlx->assets->door_closed;
 	mlx->tree = mlx->assets->tree_1;
