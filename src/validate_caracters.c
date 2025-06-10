@@ -45,9 +45,9 @@ static int	validate_caracters_count(char **board)
 		ft_putstr_fd("there is no wall\n", 2);
 		return (1);
 	}
-	if (how_many('E', board) < 1)
+	if (how_many('E', board) != 1)
 	{
-		ft_putstr_fd("there is no Exit\n", 2);
+		ft_putstr_fd("there is a number of Exits diferent from 1\n", 2);
 		return (1);
 	}
 	if (how_many('C', board) < 1)
@@ -55,9 +55,9 @@ static int	validate_caracters_count(char **board)
 		ft_putstr_fd("there is no Collectable\n", 2);
 		return (1);
 	}
-	if (how_many('P', board) < 1)
+	if (how_many('P', board) != 1)
 	{
-		ft_putstr_fd("there is no Player\n", 2);
+		ft_putstr_fd("there is a number of Players diferent from 1\n", 2);
 		return (1);
 	}
 	return (0);
