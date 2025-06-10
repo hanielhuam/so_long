@@ -6,7 +6,7 @@
 /*   By: hmacedo- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/26 20:53:49 by hmacedo-          #+#    #+#             */
-/*   Updated: 2025/05/26 21:30:04 by hmacedo-         ###   ########.fr       */
+/*   Updated: 2025/06/09 20:55:45 by hmacedo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@ static void	touch_devil(t_game *game)
 		game->board[game->px][game->py] = '0';
 	game->touch_devil = 1;
 	game->movements++;
+	ft_printf("%d\n", game->movements);
 }
 
 static void	update_p_location(t_game *game, int i, int j)
@@ -40,6 +41,7 @@ static void	move_player(t_game *game, int i, int j)
 	game->board[i][j] = 'P';
 	game->movements++;
 	update_p_location(game, i, j);
+	ft_printf("%d\n", game->movements);
 }
 
 void	move_p(t_game *game, int i, int j)

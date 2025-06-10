@@ -6,7 +6,7 @@
 /*   By: hmacedo- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/02 17:30:04 by hmacedo-          #+#    #+#             */
-/*   Updated: 2025/06/08 20:53:11 by hmacedo-         ###   ########.fr       */
+/*   Updated: 2025/06/09 20:39:17 by hmacedo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ int	key_handler(int keycode, t_game *game)
 {
 	if (keycode == 65307)
 	{
-		close_window(keycode, game);
+		close_window(game);
 		return (0);
 	}
 	else if (keycode == 97 || keycode == 65361)
@@ -32,15 +32,19 @@ int	key_handler(int keycode, t_game *game)
 	return (0);
 }
 
-int	close_window(int keycode, t_game *game)
+int	close_window(t_game *game)
 {
-	(void)keycode;
 	clear_game(game);
 	return (0);
 }
 
 int	annimation_handler(t_game *game)
 {
+	int	i;
+
+	i = 0;
+	while (i < 500000000)
+		i++;
 	if (game->annimation_count % 3 == 0)
 		game->mlx->tree = game->mlx->assets->tree_1;
 	if (game->annimation_count % 3 == 1)

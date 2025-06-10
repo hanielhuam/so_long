@@ -14,7 +14,8 @@ SRCS = ${SRC_DIR}/so_long.c ${SRC_DIR}/treat_args.c \
 	   ${SRC_DIR}/render.c ${SRC_DIR}/whereis.c \
 	   ${SRC_DIR}/validate_caracters.c ${SRC_DIR}/validate_walls.c \
 	   ${SRC_DIR}/validate_possible_path.c ${SRC_DIR}/show_game.c \
-	   ${SRC_DIR}/is_end.c ${SRC_DIR}/handlers.c ${SRC_DIR}/draw_tile.c
+	   ${SRC_DIR}/is_end.c ${SRC_DIR}/handlers.c ${SRC_DIR}/draw_tile.c \
+	   ${SRC_DIR}/init_window.c
 	   
 OBJS = ${SRCS:${SRC_DIR}/%.c=${OBJ_DIR}/%.o}
 
@@ -27,7 +28,7 @@ $(NAME): ${LIBFT} ${OBJS}
 
 ${OBJ_DIR}/%.o: ${SRC_DIR}/%.c
 	mkdir -p $(dir $@)
-	$(CC) $(CFLAGS) ${INCLUDE} -O3 -c $< -o $@
+	$(CC) $(CFLAGS) ${INCLUDE} -c $< -o $@
 
 ${LIBFT}:
 	make -C ${LIBFT_DIR}

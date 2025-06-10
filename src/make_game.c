@@ -6,7 +6,7 @@
 /*   By: hmacedo- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/26 20:43:54 by hmacedo-          #+#    #+#             */
-/*   Updated: 2025/06/08 19:48:42 by hmacedo-         ###   ########.fr       */
+/*   Updated: 2025/06/09 19:33:32 by hmacedo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,15 +19,15 @@ static	void	init_assets(t_mlx *mlx)
 
 	img_width = ASSET_WIDTH;
 	img_height = ASSET_HEIGHT;
-	mlx->caracter = mlx_xpm_file_to_image(mlx->mlx,\
+	mlx->caracter = mlx_xpm_file_to_image(mlx->mlx, \
 			CARACTER, &img_width, &img_height);
-	mlx->enemy = mlx_xpm_file_to_image(mlx->mlx,\
+	mlx->enemy = mlx_xpm_file_to_image(mlx->mlx, \
 			ENEMY, &img_width, &img_height);
-	mlx->collectable = mlx_xpm_file_to_image(mlx->mlx,\
+	mlx->collectable = mlx_xpm_file_to_image(mlx->mlx, \
 			COLLECTABLE, &img_width, &img_height);
-	mlx->assets->door_open = mlx_xpm_file_to_image(mlx->mlx,\
+	mlx->assets->door_open = mlx_xpm_file_to_image(mlx->mlx, \
 			DOOR_OPEN, &img_width, &img_height);
-	mlx->assets->door_closed = mlx_xpm_file_to_image(mlx->mlx,\
+	mlx->assets->door_closed = mlx_xpm_file_to_image(mlx->mlx, \
 			DOOR_CLOSE, &img_width, &img_height);
 	mlx->background = mlx_xpm_file_to_image(mlx->mlx, \
 			BACKGROUND, &img_width, &img_height);
@@ -42,11 +42,7 @@ static	void	init_assets(t_mlx *mlx)
 static void	init_config_mlx(t_mlx *mlx, t_game *game)
 {
 	mlx->mlx = mlx_init();
-	mlx->window = mlx_new_window(mlx->mlx, \
-			WINDOW_WIDTH, WINDOW_HEIGHT, "so_long");
-	mlx_key_hook(mlx->window, key_handler, game);
-	mlx_hook(mlx->window, 17, 1L << 0, close_window, game);
-	mlx_loop_hook(mlx->mlx, annimation_handler, game);
+	mlx->window = init_window(mlx, game->board);
 	init_assets(mlx);
 	mlx->door = mlx->assets->door_closed;
 	mlx->tree = mlx->assets->tree_1;
